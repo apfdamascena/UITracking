@@ -82,6 +82,7 @@ open class EyeTrackingViewController: UIViewController,
         
         self.datasource = datasource
         self.delegate = delegate
+        self.presenter = EyeMovePresenter()
         
         super.init(nibName: nil, bundle: nil)
         datasource.trackerAdapter.delegate = self
@@ -142,6 +143,11 @@ extension EyeTrackingViewController: @preconcurrency EyeTracingInterpreterDelega
     ///   - action: The `EyeAction` detected (e.g., `.select`, `.deselect`, `.pop`).
     ///   - section: The section index where the action occurred.
     func onEyeAction(_ action: EyeAction, _ section: Int) {
+        
+        print("action: ", action)
+        print("section: ", section)
+        
+        print("datasource", datasource)
         
         if action == .select {
             guard let isLastViewSection = presenter?.isLastSectionReachable(on: datasource.depths, and: section),

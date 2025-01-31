@@ -26,11 +26,7 @@ public class TracingInterpreterImpl: @preconcurrency EyeTracingInterpreter {
         }
         
         let quadrantSize = screenSize / CGFloat(viewsQuantity)
-        
-        print(screenSize)
-        print(quadrantSize)
-        print(viewsQuantity)
-        
+                
         let sections = (1...viewsQuantity).map { CGFloat($0) * quadrantSize }
         
         let indexForView = sections.firstIndex(where: { section in
