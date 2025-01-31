@@ -13,7 +13,7 @@ import UIKit
 /// The view can be used for organizing interactive areas of the screen that will be monitored by eye-tracking.
 /// Each instance can represent a part of the screen or a subarea, with the ability to add constraints and subviews to represent different sections visually.
 @MainActor
-public class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconcurrency AnyEyeTrackingAction {
+open class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconcurrency AnyEyeTrackingAction {
     
     /// A string that represents the event associated with this view, if any.
     ///
@@ -50,14 +50,13 @@ public class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preco
     /// It raises a runtime error if called directly, as this view is intended to be instantiated programmatically.
     ///
     /// - Parameter coder: The coder used to initialize the view.
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     /// Adds subviews to the current view.
     ///
-    /// This method sets the background color of the view to white.
-    func addSubviews() {
+    public func addSubviews() {
         self.backgroundColor = .white
     }
     
@@ -69,6 +68,12 @@ public class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preco
             self.addSubview(view)
             view.addChildrenSubviews()
         }
+    }
+    
+    /// Adds constraints to the current view.
+    ///
+    public func addConstraintsSubviews() {
+        
     }
     
     /// Sets up constraints for the child subviews of the current view.
