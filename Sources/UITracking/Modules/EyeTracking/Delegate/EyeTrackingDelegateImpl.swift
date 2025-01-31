@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class EyeTrackingDelegateImpl: EyeTrackingDelegate {
+public class EyeTrackingDelegateImpl: EyeTrackingDelegate {
     
     var popActionSubject: RxSwift.PublishSubject<Void> = PublishSubject()
     

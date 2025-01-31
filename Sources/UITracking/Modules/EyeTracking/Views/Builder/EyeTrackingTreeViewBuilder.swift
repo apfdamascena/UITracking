@@ -13,7 +13,7 @@ import Foundation
 /// in the context of eye-tracking. Each node in the tree represents a visual area, and it is possible to configure events and behavior
 /// for these areas.
 @MainActor
-class EyeTrackingTreeViewBuilder {
+public class EyeTrackingTreeViewBuilder {
     
     /// The root of the tree, representing the main view of the screen.
     ///

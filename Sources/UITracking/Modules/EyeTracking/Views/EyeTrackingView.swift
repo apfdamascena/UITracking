@@ -13,7 +13,7 @@ import UIKit
 /// The view can be used for organizing interactive areas of the screen that will be monitored by eye-tracking.
 /// Each instance can represent a part of the screen or a subarea, with the ability to add constraints and subviews to represent different sections visually.
 @MainActor
-class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconcurrency AnyEyeTrackingAction {
+public class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconcurrency AnyEyeTrackingAction {
     
     /// A string that represents the event associated with this view, if any.
     ///

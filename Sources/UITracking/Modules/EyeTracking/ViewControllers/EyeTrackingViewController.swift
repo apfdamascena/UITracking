@@ -14,7 +14,7 @@ import RxSwift
 /// including the `EyeTrackingDatasource`, `EyeTrackingDelegate`, and `EyeMovePresentable`. It manages the lifecycle
 /// of the eye-tracking session, processes user interactions through eye movements, and executes commands
 /// based on the user's focus and gestures.
-class EyeTrackingViewController: UIViewController,
+public class EyeTrackingViewController: UIViewController,
                                  @preconcurrency EyeTrackingSetupViewController {
 
     /// The main view responsible for rendering the eye-tracking interface.
@@ -64,19 +64,19 @@ class EyeTrackingViewController: UIViewController,
     }
     
     /// Loads the main `EyeTrackingView` as the controller's view.
-    override func loadView() {
+    public override func loadView() {
         view = eyeTrackingView
     }
     
     /// Sets up the Eye Tracking session and initializes the view.
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         datasource.tracking.startSession()
         eyeTrackingView.setupView()
     }
     
     /// Handles logic when the view appears, recalculating sections and setting the interpreter's state.
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         datasource.tracking.showPointer()
         let viewQuantity = presenter?.calculateSectionsAtDepth(on: datasource.depths) ?? 0

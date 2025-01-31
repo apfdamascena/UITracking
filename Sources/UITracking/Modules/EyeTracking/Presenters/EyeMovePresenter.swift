@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EyeMovePresenter: EyeMovePresentable {
+public class EyeMovePresenter: EyeMovePresentable {
 
     var view: EyeMoveView?
         

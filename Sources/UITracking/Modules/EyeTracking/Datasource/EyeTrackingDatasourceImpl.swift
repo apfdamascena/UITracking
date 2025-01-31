@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class EyeTrackingDatasourceImpl: EyeTrackingDatasource {
+public final class EyeTrackingDatasourceImpl: EyeTrackingDatasource {
 
     var tracking: any EyeTracker
     

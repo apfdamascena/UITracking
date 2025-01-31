@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class EyeTrackingAdapter: EyeTrackerDelegate {
+public class EyeTrackingAdapter: EyeTrackerDelegate {
 
     var delegate: EyeTracingInterpreterDelegate?
     let interpreter: EyeTracingInterpreter
