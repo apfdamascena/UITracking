@@ -58,6 +58,36 @@ open class EyeTrackingViewController: UIViewController,
         setupPopViewController()
     }
     
+    /// Initializes the Eye Tracking view controller. You should only use this at begin
+    ///
+    /// - Parameters:
+    ///   - view: The main `EyeTrackingView` to be displayed.
+    init(view: EyeTrackingView){
+        self.eyeTrackingView = view
+        
+        let tracking = EyeTracking(configuration: Configuration())
+        let interpreter = TracingInterpreterImpl()
+        let comandBus =  CommandEyeTrackerBusImpl()
+        
+
+        let adapter = EyeTrackingAdapter(tracker: tracking,
+                                          interpreter: interpreter)
+        
+        let datasource = EyeTrackingDatasourceImpl(tracking: tracking,
+                                                   trackerAdapter: adapter,
+                                                   commandBus: comandBus,
+                                                   interpreter: interpreter)
+        
+        let delegate = EyeTrackingDelegateImpl()
+        
+        self.datasource = datasource
+        self.delegate = delegate
+        
+        super.init(nibName: nil, bundle: nil)
+        datasource.trackerAdapter.delegate = self
+        setupPopViewController()
+    }
+    
     /// Required initializer for storyboard-based instances. Not implemented.
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
