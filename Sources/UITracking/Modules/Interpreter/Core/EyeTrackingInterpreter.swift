@@ -10,7 +10,7 @@ import UIKit
 
 public class TracingInterpreterImpl: @preconcurrency EyeTracingInterpreter {
     
-    var viewsQuantity: Int = 2 // need to change this.
+    var viewsQuantity: Int = 1
     
     func setSectionViewQuantity(_ quantity: Int) {
         self.viewsQuantity = quantity
