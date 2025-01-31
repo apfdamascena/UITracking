@@ -82,9 +82,13 @@ open class EyeTrackingViewController: UIViewController,
         
         self.datasource = datasource
         self.delegate = delegate
+        
         self.presenter = EyeMovePresenter()
+        self.presenter?.view = eyeTrackingView
         
         super.init(nibName: nil, bundle: nil)
+
+        
         datasource.trackerAdapter.delegate = self
         setupPopViewController()
     }
