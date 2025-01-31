@@ -33,7 +33,7 @@ open class EyeTrackingTreeViewBuilder {
     /// - Parameter builder: A closure that configures the subsections of the new section. It receives an `EyeTrackingTreeViewBuilder`
     ///                      that allows for recursive configuration of subsections.
     /// - Returns: The current instance of `EyeTrackingTreeViewBuilder` to allow method chaining.
-    func addSection(builder: (EyeTrackingTreeViewBuilder) -> EyeTrackingTreeViewBuilder) -> EyeTrackingTreeViewBuilder {
+    public func addSection(builder: (EyeTrackingTreeViewBuilder) -> EyeTrackingTreeViewBuilder) -> EyeTrackingTreeViewBuilder {
         let childBuilder = EyeTrackingTreeViewBuilder()
         let childView = builder(childBuilder).build()
         root.subTrackingViews.append(childView)
@@ -48,7 +48,7 @@ open class EyeTrackingTreeViewBuilder {
     ///   - view: The `EyeTrackingView` to be added as a child node.
     ///   - onConfiguration: An optional closure to configure the view before adding it to the tree.
     /// - Returns: The current instance of `EyeTrackingTreeViewBuilder`.
-    func addView(_ view: EyeTrackingView, onConfiguration: ((EyeTrackingView) -> Void)? = nil) -> EyeTrackingTreeViewBuilder {
+    public func addView(_ view: EyeTrackingView, onConfiguration: ((EyeTrackingView) -> Void)? = nil) -> EyeTrackingTreeViewBuilder {
         onConfiguration?(view)
         root.subTrackingViews.append(view)
         return self
@@ -63,7 +63,7 @@ open class EyeTrackingTreeViewBuilder {
     ///   - event: A string representing the identifier of the event associated with the view.
     ///   - onConfiguration: An optional closure to configure the view before adding it to the tree.
     /// - Returns: The current instance of `EyeTrackingTreeViewBuilder`.
-    func addViewWithEvent(_ view: EyeTrackingView, event: String, onConfiguration: ((EyeTrackingView) -> Void)? = nil) -> EyeTrackingTreeViewBuilder {
+    public func addViewWithEvent(_ view: EyeTrackingView, event: String, onConfiguration: ((EyeTrackingView) -> Void)? = nil) -> EyeTrackingTreeViewBuilder {
         onConfiguration?(view)
         view.event = event
         root.subTrackingViews.append(view)
@@ -73,7 +73,7 @@ open class EyeTrackingTreeViewBuilder {
     /// Finalizes the tree construction and returns the root view.
     ///
     /// - Returns: The root of the `EyeTrackingView` tree, representing the complete screen division structure.
-    func build() -> EyeTrackingView {
+    public func build() -> EyeTrackingView {
         return root
     }
 }
