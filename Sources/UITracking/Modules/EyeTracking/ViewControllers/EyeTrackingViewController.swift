@@ -14,7 +14,7 @@ import RxSwift
 /// including the `EyeTrackingDatasource`, `EyeTrackingDelegate`, and `EyeMovePresentable`. It manages the lifecycle
 /// of the eye-tracking session, processes user interactions through eye movements, and executes commands
 /// based on the user's focus and gestures.
-public class EyeTrackingViewController: UIViewController,
+open class EyeTrackingViewController: UIViewController,
                                  @preconcurrency EyeTrackingSetupViewController {
 
     /// The main view responsible for rendering the eye-tracking interface.
@@ -59,7 +59,7 @@ public class EyeTrackingViewController: UIViewController,
     }
     
     /// Required initializer for storyboard-based instances. Not implemented.
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
