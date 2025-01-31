@@ -106,7 +106,7 @@ open class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconc
     ///
     /// This method sets the layer's border width to 2 and applies a green color for the border.
     /// This is typically used for visual debugging or highlighting the area in the UI.
-    func drawBorder() {
+    public func drawBorder() {
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.green.cgColor
     }
