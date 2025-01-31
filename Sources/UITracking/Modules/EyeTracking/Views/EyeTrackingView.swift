@@ -28,7 +28,7 @@ open class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconc
     /// Initializes a new `EyeTrackingView` instance with an optional list of sub-views.
     ///
     /// - Parameter subTrackingViews: An optional array of child `EyeTrackingView` objects to be added to the view.
-    init(subTrackingViews: [EyeTrackingView] = []) {
+    public init(subTrackingViews: [EyeTrackingView] = []) {
         self.subTrackingViews = subTrackingViews
         super.init(frame: .zero)
         setupView()
@@ -39,20 +39,17 @@ open class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconc
     /// - Parameters:
     ///   - subTrackingViews: An optional array of child `EyeTrackingView` objects to be added to the view.
     ///   - event: A string that represents the event associated with this view.
-    init(subTrackingViews: [EyeTrackingView] = [], event: String) {
+    public init(subTrackingViews: [EyeTrackingView] = [], event: String) {
         self.subTrackingViews = subTrackingViews
         self.event = event
         super.init(frame: .zero)
         setupView()
     }
     
-    /// Required initializer for using the view from a storyboard or nib.
-    /// It raises a runtime error if called directly, as this view is intended to be instantiated programmatically.
-    ///
-    /// - Parameter coder: The coder used to initialize the view.
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     /// Adds subviews to the current view.
     ///
