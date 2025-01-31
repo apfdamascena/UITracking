@@ -21,6 +21,10 @@ public class TracingInterpreterImpl: @preconcurrency EyeTracingInterpreter {
         let screenSize = UIScreen.screenHeight
         let centralPointer = point.y
         
+        if viewsQuantity <= 0 {
+            return 0
+        }
+        
         let quadrantSize = screenSize / CGFloat(viewsQuantity)
         
         print(screenSize)
