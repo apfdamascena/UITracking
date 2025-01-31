@@ -62,7 +62,7 @@ open class EyeTrackingViewController: UIViewController,
     ///
     /// - Parameters:
     ///   - view: The main `EyeTrackingView` to be displayed.
-    init(view: EyeTrackingView){
+    public init(view: EyeTrackingView){
         self.eyeTrackingView = view
         
         let tracking = EyeTracking(configuration: Configuration())
