@@ -11,7 +11,7 @@ import Foundation
 ///
 /// The `EyeMoveViewable` protocol provides functionality to visually highlight or reset sections
 /// of the view hierarchy based on eye-tracking interactions.
-protocol EyeMoveViewable {
+public protocol EyeMoveViewable {
     
     /// Draws a border around a specific section of the view hierarchy.
     ///
@@ -34,7 +34,7 @@ protocol EyeMoveViewable {
 ///
 /// The `EyeMoveInformable` protocol provides methods to access information related to sections,
 /// their relationships, and associated events in the eye-tracking context.
-protocol EyeMoveInformable {
+public protocol EyeMoveInformable {
     
     /// Retrieves the number of sections at a given depth in the view hierarchy.
     ///
@@ -63,5 +63,5 @@ protocol EyeMoveInformable {
 ///
 /// The `EyeMoveView` type represents a view component capable of providing both visual feedback
 /// and hierarchical information for the eye-tracking system.
-typealias EyeMoveView = EyeMoveViewable & EyeMoveInformable
+public typealias EyeMoveView = EyeMoveViewable & EyeMoveInformable
 

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class EyeTrackingAdapter: EyeTrackerDelegate {
+public class EyeTrackingAdapter: EyeTrackerDelegate {
 
     var delegate: EyeTracingInterpreterDelegate?
     let interpreter: EyeTracingInterpreter
@@ -23,7 +23,7 @@ class EyeTrackingAdapter: EyeTrackerDelegate {
         tracking.eyeMovementDelegate = self
     }
     
-    func sendCoordinates(point: CGPoint) {
+    public func sendCoordinates(point: CGPoint) {
         let hasAction = interpreter.interpretEyeAction(with: point)
         let section = interpreter.interpretEyeMovement(with: point)
         
@@ -35,7 +35,7 @@ class EyeTrackingAdapter: EyeTrackerDelegate {
         delegate?.onEyeAction(action, section)
     }
     
-    func blink(at point: CGPoint) {
+    public func blink(at point: CGPoint) {
         let section = interpreter.interpretEyeMovement(with: point)
         delegate?.onEyeAction(.select, section)
     }

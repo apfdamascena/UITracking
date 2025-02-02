@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol EyeTrackerDataSource {
+public protocol EyeTrackerDataSource {
     var eyeMovementDelegate: EyeTrackerDelegate? { get set }
 }
 
-protocol EyeTrackerSession {
+public protocol EyeTrackerSession {
     
     func startSession()
     func endSession()
@@ -19,14 +19,14 @@ protocol EyeTrackerSession {
     func isEyeTrackingSupported() -> Bool
 }
 
-protocol EyeTrackerPointer {
+public protocol EyeTrackerPointer {
     func showPointer()
     func hidePointer()
 }
 
-protocol EyeTrackerDelegate {
+public protocol EyeTrackerDelegate {
     func sendCoordinates(point: CGPoint)
     func blink(at point: CGPoint)
 }
 
-typealias EyeTracker = EyeTrackerDataSource & EyeTrackerSession & EyeTrackerPointer
+public typealias EyeTracker = EyeTrackerDataSource & EyeTrackerSession & EyeTrackerPointer

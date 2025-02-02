@@ -12,7 +12,7 @@ import Foundation
 /// The `CommandEyeTrackerBus` protocol provides an interface to register, delete,
 /// and execute events related to Eye Tracking. It acts as a mediator between
 /// the Eye Tracker events and their corresponding handlers.
-protocol CommandEyeTrackerBus {
+public protocol CommandEyeTrackerBus {
     
     /// A dictionary that maps event identifiers to their respective handlers.
     ///

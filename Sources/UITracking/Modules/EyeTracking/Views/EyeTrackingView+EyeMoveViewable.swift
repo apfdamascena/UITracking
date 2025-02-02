@@ -27,7 +27,7 @@ extension EyeTrackingView: @preconcurrency EyeMoveViewable {
     ///   - memoDepth: An array that represents the path to the current view, used for recursive traversal.
     ///
     /// - Returns: The updated depth after drawing the border. If the section is not found, the border is drawn on the current view.
-    func drawBorder(on section: Int, and depth: Int, memoDepth: [Int]) -> Int {
+    public func drawBorder(on section: Int, and depth: Int, memoDepth: [Int]) -> Int {
         
         // If the current depth is greater than or equal to the memoDepth count, draw the border on the current view.
         guard depth < memoDepth.count else {
@@ -54,7 +54,7 @@ extension EyeTrackingView: @preconcurrency EyeMoveViewable {
     ///
     /// This method resets the border properties of the view and removes any border decorations
     /// from the subviews by recursively calling `removeBorder()` on each child.
-    @objc func removeBorder() {
+    @objc public func removeBorder() {
         
         // Reset the border properties of the current view.
         self.layer.borderWidth = 0

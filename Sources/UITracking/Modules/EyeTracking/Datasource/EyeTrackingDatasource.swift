@@ -12,7 +12,7 @@ import Foundation
 /// The `EyeTrackingDatasource` protocol centralizes the components required to handle
 /// eye-tracking operations, including the detection of eye movements, translation of raw data
 /// into user context, and managing associated events and view depth states.
-protocol EyeTrackingDatasource {
+public protocol EyeTrackingDatasource {
     
     /// The core Eye Tracking system responsible for detecting eye movements.
     ///

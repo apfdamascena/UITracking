@@ -23,7 +23,7 @@ extension EyeTrackingView: @preconcurrency EyeMoveInformable {
     ///   - section: The section index of the current view in the `subTrackingViews` array.
     ///
     /// - Returns: A `String?` representing the event associated with the specified view, or `nil` if no event is found.
-    func getEvent(on memoDepth: [Int], and section: Int) -> String? {
+    public func getEvent(on memoDepth: [Int], and section: Int) -> String? {
         if memoDepth.isEmpty {
             // If memoDepth is empty, return the event for the current section.
             return subTrackingViews[section].event
@@ -47,7 +47,7 @@ extension EyeTrackingView: @preconcurrency EyeMoveInformable {
     ///   - section: The section index of the current view in the `subTrackingViews` array.
     ///
     /// - Returns: A `Bool` indicating whether the current view is the last in the hierarchy at the specified depth and section.
-    func isLastView(on memoDepth: [Int], and section: Int) -> Bool {
+    public func isLastView(on memoDepth: [Int], and section: Int) -> Bool {
         
         if memoDepth.isEmpty {
             // If memoDepth is empty, return true if the current section has no subviews.
@@ -71,7 +71,7 @@ extension EyeTrackingView: @preconcurrency EyeMoveInformable {
     /// - Parameter memoDepth: An array representing the path to the target view, used for recursive traversal.
     ///
     /// - Returns: The number of section views at the specified depth level. If no views are found at the target depth, it defaults to 1.
-    func getSectionViewsQuantity(on memoDepth: [Int]) -> Int {
+    public func getSectionViewsQuantity(on memoDepth: [Int]) -> Int {
         
         if memoDepth.isEmpty {
             // If memoDepth is empty, return the count of subviews at the current level.

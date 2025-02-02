@@ -39,14 +39,14 @@ open class EyeTrackingViewController: UIViewController,
     ///   - datasource: The data source providing Eye Tracking components.
     ///   - delegate: The delegate for navigation actions.
     ///   - presenter: The presenter for focus and section calculations. Defaults to a new instance of `EyeMovePresenter`.
-    init(view: EyeTrackingView,
+    public init(view: EyeTrackingView,
          datasource: EyeTrackingDatasource,
          delegate: EyeTrackingDelegate,
-         presenter: EyeMovePresentable = EyeMovePresenter()
+         presenter: EyeMovePresentable? = nil
     ) {
         self.eyeTrackingView = view
         
-        var _presenter = presenter
+        var _presenter = presenter ?? EyeMovePresenter()
         _presenter.view = eyeTrackingView
         self.presenter = _presenter
         

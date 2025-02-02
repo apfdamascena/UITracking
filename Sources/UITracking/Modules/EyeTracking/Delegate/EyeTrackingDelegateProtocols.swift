@@ -12,7 +12,7 @@ import RxSwift
 ///
 /// The `EyeTrackingDelegate` protocol provides an interface to manage user-triggered events
 /// for navigating back in the application.
-protocol EyeTrackingDelegate {
+public protocol EyeTrackingDelegate {
 
     /// A reactive subject that emits events when the user requests to navigate back.
     ///

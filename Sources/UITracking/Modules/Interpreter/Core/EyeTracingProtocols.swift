@@ -11,7 +11,7 @@ import Foundation
 ///
 /// The `EyeTracingInterpreter` protocol defines the methods that must be implemented by any interpreter responsible for
 /// processing eye movements and translating them into actionable data within the eye-tracking system.
-protocol EyeTracingInterpreter {
+public protocol EyeTracingInterpreter {
     
     /// Interprets the eye movement based on the given point in the coordinate system.
     ///

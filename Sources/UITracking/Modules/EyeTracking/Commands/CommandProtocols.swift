@@ -13,7 +13,7 @@ import Foundation
 /// should be implemented for managing specific Eye Tracking actions.
 /// Each event handler is associated with a unique event identifier and contains
 /// the logic to execute the event in the context of a given view controller.
-protocol EyeTrackerEventHandler {
+public protocol EyeTrackerEventHandler {
     
     /// A unique identifier for the event that this handler is responsible for.
     ///

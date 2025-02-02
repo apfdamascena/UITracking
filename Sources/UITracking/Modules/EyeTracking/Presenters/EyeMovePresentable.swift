@@ -12,7 +12,7 @@ import Foundation
 /// The `EyeMovePresentable` protocol manages the presentation logic required for updating the user interface based on
 /// the current state of eye-tracking interactions. It provides methods for drawing focus areas, handling view navigation,
 /// and calculating sections within a hierarchical view structure.
-protocol EyeMovePresentable {
+public protocol EyeMovePresentable {
     
     /// The view associated with the presenter, responsible for rendering the focus area and receiving updates.
     var view: EyeMoveView? { get set }
