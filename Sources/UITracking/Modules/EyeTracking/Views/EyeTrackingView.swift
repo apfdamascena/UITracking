@@ -53,8 +53,8 @@ open class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconc
     
     /// Adds subviews to the current view.
     ///
-    public func addSubviews() {
-        self.backgroundColor = .white
+    open func addSubviews() {
+
     }
     
     /// Recursively adds child subviews to the current view.
@@ -69,7 +69,7 @@ open class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconc
     
     /// Adds constraints to the current view.
     ///
-    public func addConstraintsSubviews() {
+    open func addConstraintsSubviews() {
         
     }
     
@@ -106,9 +106,21 @@ open class EyeTrackingView: UIView, @preconcurrency AnyEyeTrackingView, @preconc
     ///
     /// This method sets the layer's border width to 2 and applies a green color for the border.
     /// This is typically used for visual debugging or highlighting the area in the UI.
-    public func drawBorder() {
-        self.layer.borderWidth = 2
+    func drawBorder() {
+        borderWidth()
+        borderColor()
+    }
+    
+    /// Set  a border color for  view.
+    open func borderColor() {
         self.layer.borderColor = UIColor.green.cgColor
     }
+    
+    /// Set  a border width.
+    open func borderWidth(){
+        self.layer.borderWidth = 2
+    }
+    
+    
 }
 

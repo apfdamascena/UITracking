@@ -9,7 +9,7 @@ import ARKit
 import UIKit
 
 @MainActor
-public class EyeTracking: NSObject, @preconcurrency EyeTrackerDataSource {
+class EyeTracking: NSObject, @preconcurrency EyeTrackerDataSource {
 
     var currentSession: Session?
     var eyeMovementDelegate: EyeTrackerDelegate?

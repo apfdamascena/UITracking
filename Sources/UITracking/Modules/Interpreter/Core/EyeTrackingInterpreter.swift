@@ -8,7 +8,7 @@
 import UIKit
 
 
-public class TracingInterpreterImpl: @preconcurrency EyeTracingInterpreter {
+class TracingInterpreterImpl: @preconcurrency EyeTracingInterpreter {
     
     var viewsQuantity: Int = 1
     
