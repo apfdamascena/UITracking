@@ -21,13 +21,13 @@ open class EyeTrackingViewController: UIViewController,
     private var eyeTrackingView: EyeTrackingView
     
     /// The presenter responsible for calculating view sections and managing focus-related drawing.
-    var presenter: EyeMovePresentable?
+    public var presenter: EyeMovePresentable?
     
     /// The data source that provides the Eye Tracking system, adapter, and interpreter.
-    private(set) var datasource: EyeTrackingDatasource
+    public private(set) var datasource: EyeTrackingDatasource
     
     /// The delegate responsible for handling navigation actions triggered by Eye Tracking.
-    private(set) var delegate: EyeTrackingDelegate
+    public private(set) var delegate: EyeTrackingDelegate
     
     /// Dispose bag for managing RxSwift subscriptions.
     private(set) var disposeBag = DisposeBag()
