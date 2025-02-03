@@ -1,5 +1,5 @@
 # **UITracking**  
-🚀 **iOS framework for creating eye tracking-controlled interfaces**  
+**iOS framework for creating eye tracking-controlled interfaces**  
 
 ## 📌 **Summary**  
 - [Introduction](#introduction)
