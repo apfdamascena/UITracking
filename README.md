@@ -39,7 +39,7 @@ The entire framework was built and tested based on **UIKit**. For better perform
 
 The view tree concept is used in the development of graphical interfaces to organize and manage visual components in a hierarchical structure. This approach allows the composition of complex interfaces from simpler components, promoting modularity and reuse. The view tree uses trees as a data structure, in which each node represents an individual view or a group of views.
 
-![View Tree representation](images/view_tree.png)
+![View Tree representation](image/view_tree.png)
 
 To assemble views in this way, an API was created to abstract all the complexity of building trees. The class `EyeTrackingTreeViewBuilder` is responsible to help creating this structure above
 
@@ -63,10 +63,10 @@ The class presents a simple and intuitive structure for composing trees. For eve
 This code divides the screen into two parts, where the upper part contains two subdivisions and the lower part contains only one. Here is an example of how it looks on the device:
 
 <p align="center">
-  <img src="images/top.png" width="22%" />
-  <img src="images/down.png" width="22%" />
-  <img src="images/top_top.png" width="22%" />
-  <img src="images/top_down.png" width="22%" />
+  <img src="image/top.png" width="22%" />
+  <img src="image/down.png" width="22%" />
+  <img src="image/top_top.png" width="22%" />
+  <img src="image/top_down.png" width="22%" />
 </p>
 
 There are three important functions on `EyeTrackingTreeViewBuilder`:
