@@ -10,7 +10,7 @@ import ARKit
 public struct Configuration {
 
     let appID: String
-    let gazeLog: GazeLogStatus
+    var gazeLog: GazeLogStatus
     
     init(blendShapes: [ARFaceAnchor.BlendShapeLocation]? = nil,
          gazeLogStatus: GazeLogStatus? = nil) {

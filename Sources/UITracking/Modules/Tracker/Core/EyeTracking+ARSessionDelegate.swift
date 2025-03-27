@@ -27,6 +27,10 @@ extension EyeTracking: @preconcurrency ARSessionDelegate {
         updateBlinkEyesAt(blinkedEyesLeft, at: pointerPositionFiltered)
     }
     
+    public func setLogScreenPoint(status: GazeLogStatus){
+        configuration.gazeLog = status
+    }
+    
     private func logScreenPointIfEnabled(point: CGPoint){
         if configuration.gazeLog == .activate {
             print("Screen Point: ", point, "at timestamp: ", Date())
