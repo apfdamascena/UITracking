@@ -17,6 +17,8 @@ public protocol EyeTrackerSession {
     func endSession()
     
     func isEyeTrackingSupported() -> Bool
+    
+    func setLogScreenPoint(status: GazeLogStatus)
 }
 
 public protocol EyeTrackerPointer {

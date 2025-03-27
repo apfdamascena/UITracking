@@ -38,4 +38,9 @@ extension EyeTracking: @preconcurrency EyeTrackerSession {
     func isEyeTrackingSupported() -> Bool {
         return ARFaceTrackingConfiguration.isSupported
     }
+    
+    
+    public func setLogScreenPoint(status: GazeLogStatus){
+        configuration.gazeLog = status
+    }
 }

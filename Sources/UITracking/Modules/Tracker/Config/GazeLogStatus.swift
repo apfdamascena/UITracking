@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum GazeLogStatus {
+public enum GazeLogStatus {
     case activate, deactivate
 }
